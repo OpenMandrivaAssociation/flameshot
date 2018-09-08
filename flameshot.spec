@@ -12,6 +12,11 @@ BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
 BuildRequires:	git
 BuildRequires:	pkgconfig(Qt5Svg)
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:  qmake5
+BuildRequires:  qt5-qtbase-devel
 
 %description
 Flameshot is a screenshot software, it's
