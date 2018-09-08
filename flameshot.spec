@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.js.org
-Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}-%{name}-%{version}.tar.gz
+Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
 BuildRequires:	git
