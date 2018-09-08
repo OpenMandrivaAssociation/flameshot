@@ -10,7 +10,7 @@ Url:		https://flameshot.js.org
 Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
-BuildRequires:	git
+#BuildRequires:	git
 BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
