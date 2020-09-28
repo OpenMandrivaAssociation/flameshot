@@ -2,8 +2,8 @@
 
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	0.6.0
-Release:	2
+Version:	0.8.3
+Release:	1
 License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.js.org
