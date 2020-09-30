@@ -41,8 +41,8 @@ powerful yet simple to use for GNU/Linux.
 %setup -q
 
 %build
-%qmake_qt5 CONFIG+=packaging CONFIG-=debug CONFIG+=release
-%make
+%cmake
+%make_build
 
 %install
-%makeinstall INSTALL_ROOT=%{buildroot}
+%make_install -C build
