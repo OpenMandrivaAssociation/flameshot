@@ -34,6 +34,7 @@ powerful yet simple to use for GNU/Linux.
 %{_datadir}/%{name}
 %{_iconsdir}/*
 %{_datadir}/metainfo/%{name}.metainfo.xml
+%{_datadir}/zsh/site-functions/_flameshot
 
 #------------------------------------------------------------------
 
