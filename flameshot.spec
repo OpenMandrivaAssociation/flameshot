@@ -33,7 +33,7 @@ powerful yet simple to use for GNU/Linux.
 %{_datadir}/dbus-1/services/*.Flameshot.service
 %{_datadir}/%{name}
 %{_iconsdir}/*
-%{_datadir}/metainfo/%{name}.appdata.xml
+%{_datadir}/metainfo/%{name}.metainfo.xml
 
 #------------------------------------------------------------------
 
