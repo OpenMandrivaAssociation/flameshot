@@ -27,13 +27,13 @@ powerful yet simple to use for GNU/Linux.
 %files
 %doc *.md LICENSE
 %{_bindir}/%{name}
-#{_datadir}/applications/flameshot.desktop
+%{_datadir}/applications/org.flameshot.Flameshot.desktop
 %{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/dbus-1/interfaces/*.Flameshot.xml
 %{_datadir}/dbus-1/services/*.Flameshot.service
 %{_datadir}/%{name}
 %{_iconsdir}/*
-#{_datadir}/metainfo/%{name}.metainfo.xml
+%{_datadir}/metainfo/org.flameshot.Flameshot.metainfo.xml
 %{_datadir}/zsh/site-functions/_flameshot
 
 #------------------------------------------------------------------
