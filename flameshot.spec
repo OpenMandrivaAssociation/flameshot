@@ -1,4 +1,5 @@
-%define	debug_package %{nil}
+#define	debug_package %{nil}
+%define _empty_manifest_terminate_build 0
 
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
@@ -35,6 +36,7 @@ powerful yet simple to use for GNU/Linux.
 %{_iconsdir}/*
 %{_datadir}/metainfo/org.flameshot.Flameshot.metainfo.xml
 %{_datadir}/zsh/site-functions/_flameshot
+%{_mandir}/man1/flameshot.1.*
 
 #------------------------------------------------------------------
 
