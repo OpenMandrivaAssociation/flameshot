@@ -36,6 +36,7 @@ powerful yet simple to use for GNU/Linux.
 %{_iconsdir}/*
 %{_datadir}/metainfo/org.flameshot.Flameshot.metainfo.xml
 %{_datadir}/zsh/site-functions/_flameshot
+%{_datadir}/fish/vendor_completions.d/flameshot.fish
 %{_mandir}/man1/flameshot.1.*
 
 #------------------------------------------------------------------
