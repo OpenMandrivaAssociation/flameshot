@@ -3,8 +3,8 @@
 
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	11.0.0
-Release:	1
+Version:	12.0
+Release:	0.rc1
 License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.js.org
@@ -42,7 +42,7 @@ powerful yet simple to use for GNU/Linux.
 #------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -n %{name}-%{version}.rc1
 
 %build
 %cmake
