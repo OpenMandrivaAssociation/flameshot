@@ -3,12 +3,12 @@
 
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	12.0
-Release:	0.rc1
+Version:	12.0.0
+Release:	1
 License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.js.org
-Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}.rc1/%{name}-%{version}.rc1.tar.gz
+Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
 BuildRequires:  qt5-linguist-tools
@@ -42,7 +42,7 @@ powerful yet simple to use for GNU/Linux.
 #------------------------------------------------------------------
 
 %prep
-%autosetup -n %{name}-%{version}.rc1
+%autosetup -p1
 
 %build
 %cmake
