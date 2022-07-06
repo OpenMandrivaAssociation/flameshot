@@ -3,7 +3,7 @@
 
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	12.0.0
+Version:	12.1.0
 Release:	1
 License:	GPLv3
 Group:		Graphics
