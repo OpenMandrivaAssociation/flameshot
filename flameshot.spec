@@ -1,29 +1,26 @@
-#define	debug_package %{nil}
-%define _empty_manifest_terminate_build 0
-
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	12.1.0
-Release:	2
+Version:	13.3.0
+Release:	1
 License:	GPLv3
 Group:		Graphics
-Url:		https://flameshot.js.org
-Source0:	https://github.com/lupoDharkael/flameshot/archive/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	qt5-devel
-BuildRequires:	qt5-linguist
-BuildRequires:  qt5-linguist-tools
+Url:		https://flameshot.org
+Source0:	https://github.com/flameshot-org/flameshot/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:	git
-BuildRequires:	pkgconfig(Qt5Svg)
-BuildRequires:  pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5Gui)
-BuildRequires:  pkgconfig(Qt5Widgets)
-BuildRequires:  qmake5
-BuildRequires:  cmake
-BuildRequires:  qt5-qtbase-devel
+BuildRequires:	pkgconfig(Qt6Svg)
+BuildRequires:  pkgconfig(Qt6Core)
+BuildRequires:  pkgconfig(Qt6Gui)
+BuildRequires:  pkgconfig(Qt6Widgets)
+BuildRequires:  qmake-qt6
+BuildSystem:	cmake
 
 %description
 Flameshot is a screenshot software, it's
 powerful yet simple to use for GNU/Linux.
+
+%install -a
+%libpackages
+echo '%{_libdir}/cmake/KDSingleApplication-qt6' >>%{specpartsdir}/%{mklibname -s -d kdsingleapplication-qt6}.specpart
 
 %files
 %doc *.md LICENSE
@@ -38,15 +35,3 @@ powerful yet simple to use for GNU/Linux.
 %{_datadir}/zsh/site-functions/_flameshot
 %{_datadir}/fish/vendor_completions.d/flameshot.fish
 %{_mandir}/man1/flameshot.1.*
-
-#------------------------------------------------------------------
-
-%prep
-%autosetup -p1
-
-%build
-%cmake
-%make_build
-
-%install
-%make_install -C build
