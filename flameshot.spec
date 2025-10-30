@@ -12,8 +12,10 @@ BuildRequires:	pkgconfig(Qt6Svg)
 BuildRequires:  pkgconfig(Qt6Core)
 BuildRequires:  pkgconfig(Qt6Gui)
 BuildRequires:  pkgconfig(Qt6Widgets)
+BuildRequires:	cmake(KDSingleApplication-qt6)
 BuildRequires:  qmake-qt6
 BuildSystem:	cmake
+BuildOption:	-DUSE_BUNDLED_KDSINGLEAPPLICATION:BOOL=OFF
 
 %description
 Flameshot is a screenshot software, it's
@@ -26,7 +28,6 @@ mv Qt-Color-Widgets-* external/Qt-Color-Widgets
 
 %install -a
 %libpackages
-echo '%{_libdir}/cmake/KDSingleApplication-qt6' >>%{specpartsdir}/%{mklibname -s -d kdsingleapplication-qt6}.specpart
 
 %files
 %doc *.md LICENSE
