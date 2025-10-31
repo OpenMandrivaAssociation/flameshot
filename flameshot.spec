@@ -8,10 +8,11 @@ Url:		https://flameshot.org
 Source0:	https://github.com/flameshot-org/flameshot/archive/refs/tags/v%{version}.tar.gz
 Source1:	https://gitlab.com/mattbas/Qt-Color-Widgets/-/archive/3.0.0/Qt-Color-Widgets-3.0.0.tar.bz2
 BuildRequires:	git
-BuildRequires:	pkgconfig(Qt6Svg)
-BuildRequires:  pkgconfig(Qt6Core)
-BuildRequires:  pkgconfig(Qt6Gui)
-BuildRequires:  pkgconfig(Qt6Widgets)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:  cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Gui)
+BuildRequires:  cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(KDSingleApplication-qt6)
 BuildRequires:  qmake-qt6
 BuildSystem:	cmake
