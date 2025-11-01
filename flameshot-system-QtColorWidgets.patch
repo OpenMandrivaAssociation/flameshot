@@ -1,0 +1,23 @@
+diff -up flameshot-13.3.0/CMakeLists.txt.omv~ flameshot-13.3.0/CMakeLists.txt
+--- flameshot-13.3.0/CMakeLists.txt.omv~	2025-11-01 01:54:32.343423970 +0100
++++ flameshot-13.3.0/CMakeLists.txt	2025-11-01 01:15:59.265920073 +0100
+@@ -24,7 +24,11 @@ option(BUILD_SHARED_LIBS OFF)
+ #Needed due to linker error with QtColorWidget
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ 
++option(USE_SYSTEM_QTCOLORWIDGETS "Use system copy of QtColorWidgets" OFF)
+ 
++if(USE_SYSTEM_QTCOLORWIDGETS)
++    find_package(qtcolorwidgets REQUIRED)
++else()
+ # Dependency can be fetched via flatpak builder
+ if(EXISTS "${CMAKE_SOURCE_DIR}/external/Qt-Color-Widgets/CMakeLists.txt")
+     add_subdirectory("${CMAKE_SOURCE_DIR}/external/Qt-Color-Widgets" EXCLUDE_FROM_ALL)
+@@ -45,6 +49,7 @@ else()
+       FetchContent_MakeAvailable(qtColorWidgets)
+   endif()
+ endif()
++endif()
+ 
+ # This can be read from ${PROJECT_NAME} after project() is called
+ if (APPLE)

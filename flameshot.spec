@@ -6,7 +6,6 @@ License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.org
 Source0:	https://github.com/flameshot-org/flameshot/archive/refs/tags/v%{version}.tar.gz
-Source1:	https://gitlab.com/mattbas/Qt-Color-Widgets/-/archive/3.0.0/Qt-Color-Widgets-3.0.0.tar.bz2
 BuildRequires:	git
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:  cmake(Qt6Core)
@@ -14,18 +13,18 @@ BuildRequires:  cmake(Qt6Gui)
 BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(KDSingleApplication-qt6)
+BuildRequires:	cmake(qtcolorwidgets)
 BuildRequires:  qmake-qt6
 BuildSystem:	cmake
 BuildOption:	-DUSE_BUNDLED_KDSINGLEAPPLICATION:BOOL=OFF
+BuildOption:	-DUSE_SYSTEM_QTCOLORWIDGETS:BOOL=ON
+
+%patchlist
+flameshot-system-QtColorWidgets.patch
 
 %description
 Flameshot is a screenshot software, it's
 powerful yet simple to use for GNU/Linux.
-
-%prep -a
-tar xf %{S:1}
-mkdir external
-mv Qt-Color-Widgets-* external/Qt-Color-Widgets
 
 %install -a
 %libpackages
