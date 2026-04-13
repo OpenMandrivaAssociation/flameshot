@@ -20,7 +20,7 @@ BuildOption:	-DUSE_BUNDLED_KDSINGLEAPPLICATION:BOOL=OFF
 BuildOption:	-DUSE_SYSTEM_QTCOLORWIDGETS:BOOL=ON
 
 %patchlist
-flameshot-system-QtColorWidgets.patch
+#flameshot-system-QtColorWidgets.patch
 
 %description
 Flameshot is a screenshot software, it's
