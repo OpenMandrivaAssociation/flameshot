@@ -1,11 +1,11 @@
 Summary:	Powerful yet simple to use screenshot software
 Name:		flameshot	
-Version:	13.3.0
+Version:	14.0.rc1
 Release:	1
 License:	GPLv3
 Group:		Graphics
 Url:		https://flameshot.org
-Source0:	https://github.com/flameshot-org/flameshot/archive/refs/tags/v%{version}.tar.gz
+Source0:	https://github.com/flameshot-org/flameshot/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	git
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:  cmake(Qt6Core)
